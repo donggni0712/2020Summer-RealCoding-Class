@@ -1,34 +1,22 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { sum as add, multiple } from "./Math";
-
-import Math from "./Math";
+//import { sum as add, multiple } from "./Math";
+//import Math from "./Math";
+import Header from "./components/Header";
 
 function App() {
   //console.log(Math);
-  const sum = "SUM";
+  //const sum = "SUM";
+  //console.log(sum);
+  //console.log(add);
+  //console.log(multiple);
 
-  console.log(sum);
-  console.log(add);
-  console.log(multiple);
+  const cityName = "Seoul";
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header cityName={cityName} />
+      <p>Hello world!</p>
     </div>
   );
 }
