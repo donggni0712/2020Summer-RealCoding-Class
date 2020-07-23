@@ -1,8 +1,10 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./App.css";
 //import { sum as add, multiple } from "./Math";
 //import Math from "./Math";
 import Header from "./components/Header";
+import RouterApp from "./RouterApp";
 
 function App() {
   //console.log(Math);
@@ -11,13 +13,10 @@ function App() {
   //console.log(add);
   //console.log(multiple);
 
-  const cityName = "Seoul";
-
   return (
-    <div className="App">
-      <Header cityName={cityName} />
-      <p>Hello world!</p>
-    </div>
+    <BrowserRouter>
+      <RouterApp />
+    </BrowserRouter>
   );
 }
 

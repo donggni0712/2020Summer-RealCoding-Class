@@ -1,11 +1,24 @@
 import React from "react";
 import logo from "../logo.svg";
 
-function Header(props) {
-  console.log(props);
-  console.log(props.cityName);
+// es5 function
+//function Header(props) {
 
-  const cityName = props.cityName;
+const Header = ({ cityName }) => {
+  //console.log(props);
+  //props = {cityName: 'Seoul' }
+  //console.log(props.cityName);
+
+  //es5
+  //const cityName = props.cityName;
+
+  //es6
+  /*
+    props = {
+    cityName: 'Seoul'
+    }
+    */
+  //const { cityName } = props;
 
   return (
     <header className="App-header">
@@ -24,6 +37,6 @@ function Header(props) {
       </a>
     </header>
   );
-}
+};
 
 export default Header;
