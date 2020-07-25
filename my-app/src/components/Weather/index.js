@@ -9,8 +9,8 @@ const Weather = (props) => {
   console.log(cityName);
   return (
     <div>
-      <h1>Weather : {cityName}</h1>
-      <CallApi />
+      <h1>도시 이름 : {cityName}</h1>
+      <CallApi CityName={cityName} />
       <p>Here is front page.!</p>
     </div>
   );

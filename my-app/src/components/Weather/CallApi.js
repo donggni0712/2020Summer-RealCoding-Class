@@ -1,4 +1,5 @@
 import React from "react";
+import Weather from "./index";
 
 class CallApi extends React.Component {
   state = {
@@ -13,8 +14,9 @@ class CallApi extends React.Component {
   };
 
   componentDidMount() {
+    const cityname = this.props.CityName;
     const cityWeatherdata = fetch(
-      `http://localhost:8080/weather-service/weathers?cityName=Seoul`
+      `http://localhost:8080/weather-service/weathers?cityName=${cityname}`
     )
       .then((res) => {
         return res.json(); //Promise 반환
@@ -32,7 +34,13 @@ class CallApi extends React.Component {
           temp_min: json.main.temp_min,
           temp_max: json.main.temp_max,
         });
+        console.log(this.state);
         // 서버에서 주는 json데이터가 출력 됨
+      })
+      .catch((error) => {
+        console.log("error");
+        alert("Error");
+        window.history.back();
       });
   }
   render() {
